@@ -32,9 +32,15 @@ body {
 }
 
 .screen {
+    display: flex;
     min-height: 10vh;
     background-color: white;
     border: 1px solid black;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 70px;
+
 }
 .calc-body{
     display: flex;
@@ -42,7 +48,17 @@ body {
     background-color: white;
     /* min-height: 300px; */
     flex: 1;
-    border: 1px solid orange;
+    border: 1px solid black;
+    gap: 10px;
+    padding: 10px;
+}
+.row {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+button {
+    flex: 1;
 }
 
 .footer {
