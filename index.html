@@ -6,38 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>Calculator!</title>
 </head>
 <body>
     <h1>Calculator!</h1>
     <div class="container">
         <div class="screen">
-            0
+            <div class="details-container">
+                <p class = 'details'>
+                </p>
+            </div>
+
+            <div class="result-container">
+                <p class = 'result'>
+                </p>
+            </div>
+
         </div>
         <div class="calc-body">
             <div class = 'row' id="row1">
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button>÷</button>
+                <button class = 'operator'>÷</button>
             </div>
             <div  class = 'row' id="row2">
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button>x</button>
+                <button class = 'operator'>x</button>
             </div>
             <div  class = 'row' id="row3">
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-                <button>-</button>
+                <button class = 'operator'>-</button>
             </div>
             <div  class = 'row' id="row4">
                 <button>.</button>
                 <button>0</button>
-                <button>=</button>
-                <button>+</button>
+                <button class = 'operator'>=</button>
+                <button class = 'operator'>+</button>
             </div>
             <div  class = 'row' id="row5">
                 <button class="specialBtn">AC</button>
@@ -45,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="footer">Copyright Matthew 2022</div>
+    <div class="footer">Copyright © Matthew Gani 2022</div>
     
 </body>
 </html>
