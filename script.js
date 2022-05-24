@@ -165,12 +165,14 @@ function changeDisplay(content) {
 
     }
     else if (currType == '.') {
-        if (getType(latestElement) == 'number') {
-            string = latestElement.toString();
-            if (!(latestElement.toString().includes('.'))) {
-                latestElement = latestElement + ".";
-                currentDisplay[currentDisplay.length - 1] = latestElement;
-                result.textContent = latestElement;
+        if (!emptyDisplay) {
+            if (getType(latestElement) == 'number') {
+                string = latestElement.toString();
+                if (!(latestElement.toString().includes('.'))) {
+                    latestElement = latestElement + ".";
+                    currentDisplay[currentDisplay.length - 1] = latestElement;
+                    result.textContent = latestElement;
+                }
             }
         }
 
@@ -193,7 +195,7 @@ function changeDisplay(content) {
 
 
 function add(a, b) {
-    return parseInt(a)+ parseInt(b);
+    return parseFloat(a)+ parseFloat(b);
 }
 function subtract(a, b) {
     return a-b;
