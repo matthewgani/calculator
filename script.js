@@ -56,6 +56,7 @@ function changeDisplay(content) {
     else if (currType == 'C') {
         // remove last added integer digit
         if (!emptyDisplay) {
+
             if (getType(latestElement) == 'number') {
                 if (latestElement.length == 1) {
                     currentDisplay.pop();
@@ -71,10 +72,17 @@ function changeDisplay(content) {
             else {
                 // latest element is a operation, we go for prev element
                 prevElement = currentDisplay[currentDisplay.length - 2];
-                latestElement = latestElement.slice(0, -1);
-                currentDisplay[currentDisplay.length - 2] = prevElement;
-                result.textContent = '';
+                if (prevElement.length == 1) {
+                    currentDisplay = [];
+                    result.textContent = '';
+                }
+                else {
+                    prevElement = prevElement.slice(0, -1);
+                    currentDisplay[currentDisplay.length - 2] = prevElement;
+                    result.textContent = prevElement;
+                }
             }
+            
         }
     }
     else if (currType == 'number') {
